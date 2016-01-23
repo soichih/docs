@@ -120,7 +120,14 @@ Managing Nodes with Puppet
    multi_puppet_install
    multi_puppet_using_server
    multi_puppet_using_client
+
+Meshconfig Administrator
+==========================
+.. toctree::
+   :maxdepth: 2
    
+   mca
+    
 Accessing Raw Data 
 ------------------
 .. toctree::
