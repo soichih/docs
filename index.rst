@@ -124,7 +124,7 @@ Managing Nodes with Puppet
 Meshconfig Administrator
 ==========================
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    
    mca
     
