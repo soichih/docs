@@ -4,7 +4,7 @@ Installation
 Docker
 ============
 
-MCA requires a postgreSQL container.
+Start a postgreSQL container for MCA.
 
 ::
 

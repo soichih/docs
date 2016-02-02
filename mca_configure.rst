@@ -97,24 +97,24 @@ Others
 
 **index.js** contains all other configuration such as ports and host names to bind MCA server and MCA publisher. It also contain information such as the location of JWT public key to verify token issued by SCA authentication service.
 
-Authentication (sca-auth)
+Authentication Service (sca-auth)
 ============
 
 MCA uses authentication microservices developed by SCA (Scalable Computing Archive) group at IU. You can enable / disable various authentication methods provided by sca-auth by modifying /opt/mca/auth/api/config/ .
 
-Certain features in MCA are restricted to only super-admin. In order to make a user super-admin, you will need to run following as root via the command line.
+Certain features in MCA are restricted to only super-admin. In order to become a super-admin, you will need to run following as root via the command line.
 
 ::
 
     cd /opt/mca/auth/bin
     ./auth.js modscope --username hayashis --add '{"mca": ["admin"]}'
 
-The user needs to sign out & login again in order for this change to take effect.
+You need to sign out & login again in order for this change to take effect.
 
 Please refer to `sca-auth gitrepo <https://github.com/soichih/sca-auth>`_ for more information.
 
-Authentication (sca-profile)
+Profile Service (sca-profile)
 ============
 
-MCA uses profile microservices developed by SCA (Scalable Computing Archive) group at IU. Please refer to `sca-auth gitrepo <https://github.com/soichih/sca-profile>`_ for more information.
+MCA uses profile microservices developed by SCA (Scalable Computing Archive) group at IU. Please refer to `sca-profile gitrepo <https://github.com/soichih/sca-profile>`_ for more information.
 
