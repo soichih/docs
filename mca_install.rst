@@ -41,7 +41,7 @@ Then, download the latest MCA RHEL6 RPM from `GitRepo <https://github.com/soichi
 
 ::
 
-    yum install mca-2.0-X.x86_64.rpm
+    yum install mca-2.0-X.el6.x86_64.rpm
 
 If this is the first time you have installed MCA, you can run following to initialize DB, generate access token, etc..
 
@@ -91,7 +91,6 @@ Edit /opt/mca/mca/api/config/db.js
     module.exports = 'postgres://mca:hogehoge@localhost:5433/mcadmin'
 
 
-
 RHEL7 / CentOS7 (x86)
 ============
 
@@ -100,13 +99,19 @@ Download the latest MCA RHEL7 RPM from `GitRepo <https://github.com/soichih/mesh
 ::
 
     yum install epel-release
-    yum install mca-2.0-X.x86_64.rpm
+    yum install mca-2.0-X.el7.x86_64.rpm
 
-If this is the first time you have installed MCA, you can run following to initialize DB, generate access token, etc..
+If this is the first time you have installed MCA, you can run following to initialize postgres DB, generate access token, start apache, MCA, etc..
 
 ::
 
-    systemctl setup mca
+    /opt/mca/mca/deploy/rhel7/setup.sh
+
+If you are upgrading to a new version of MCA, MCA services should automatically restart. If you want to force restarting it anyway, you can run following.
+
+::
+
+    pm2 restart all
 
 You should now be able to access MCA UI at https://<yourhostname>/meshconfig
 
