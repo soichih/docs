@@ -24,7 +24,7 @@ Installation process
 Supported platform
 ------------------
 
-The perfsonarUI packages are built for Red Hat Enterprise Linux 6 and Debian 7. No issues are expected for future minor versions.
+The perfsonarUI packages are built for Red Hat Enterprise Linux 6, Debian 7 and Debian 8. No issues are expected for future minor versions. RHEL derivatives, such as CentOS, and Debian derivatives, such as Ubuntu, should work as well.
 
 Prerequisite software
 ---------------------
@@ -62,7 +62,7 @@ Use the following commands to add the repository’s PGP key:
 
 	.. code-block:: console 
 
-                # wget -qO - http://downloads.perfsonar.net/debian/perfsonar-wheezy-release.gpg.key | apt-key add -
+                # wget -qO - http://downloads.perfsonar.net/debian/perfsonar-wheezy-official.gpg.key | apt-key add -
 
 Then clean and update the package list on your system using:
 

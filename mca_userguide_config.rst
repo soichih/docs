@@ -15,6 +15,15 @@ rather than picking a specific meshconfig.
 
 To generate Auto meshconfig, simply choose a hostname from the hostname dropdown list.
 
+<<<<<<< HEAD
+=======
+Here is an example of Auto Mesh Config URL
+
+``http://meshconfig-itb.grid.iu.edu/meshconfig/pub/auto/psmsu01.aglt2.org``
+
+You can modify the trailing hostname to create a different auto-URL.
+
+>>>>>>> 91d9b554521cf744a2a52213111422fded03324a
 Mesh Config List
 ----------------------------------
 
@@ -31,7 +40,11 @@ Start adding a new mesh config by clicking "Add New" at the buttom of the page.
 
 * Config Name: Name of the config. Also used as description for mesh config
 
+<<<<<<< HEAD
 * url: Trailing URL for this mesh config. For example, if you enter us-atlas, you will be able to download this mesh config via http://<hostname>/meshconfig/pub/us-atlas
+=======
+* url: Trailing URL for this mesh config. For example, if you enter us-atlas, you will be able to download this mesh config via http://<hostname>/meshconfig/pub/config/us-atlas
+>>>>>>> 91d9b554521cf744a2a52213111422fded03324a
 
 * Admins: List of users can edit this meshconfig.
 

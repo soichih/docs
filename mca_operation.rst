@@ -1,8 +1,7 @@
-Operational Guide
+Operational Guide (deprecated)
 ######################################
 
-Service Status
-============
+Service Status Check
 
 MCA uses pm2 to monitor various MCA realted services and load-balance incoming requests. You can see a list of services by ..
 
@@ -66,17 +65,28 @@ Log files
     -rw-rw-r-- 1 mca mca   198110 Jan 22 20:14 cache-3.log
     -rw-rw-r-- 1 mca mca 18390157 Jan 22 20:37 cache.err
 
-Volatile Data
+Backup (Volatile Data)
 ============
 
-MCA stores MeshConfig related information in postgreSQL. 
+MCA itself stores MeshConfig related information in mongodb. However, MCA also uses various SCA services which uses sqlite and other storage systems.
+
+::
+
+    /var/lib/pgsql/data
+
+For RHEL6, 
+::
+
+    /opt/rh/postgresql92/root/var/lib/pgsql/data
 
 SCA auth service stores authentication information in a sqlite3 DB at (by default)
 ::
+
     /var/lib/mca/auth.sqlite
 
 SCA profile service stores profile information in a sqlite3 DB at (by default)
 ::
+
     /var/lib/mca/profile.sqlite
 
 Following configuration directory should be backed-up
@@ -87,7 +97,7 @@ Following configuration directory should be backed-up
     /opt/mca/auth/api/config
     /opt/mca/profile/api/config
 
-And UI has its own configuration files. These should be backed-up also - if you have modified from the RPM installed content
+And UI has its own set of configuration files. These should be backed-up if you have modified from the RPM installed content
 
 ::
 
